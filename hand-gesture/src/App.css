@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f13;
+  color: white;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.status {
+  color: #999;
+  margin-bottom: 16px;
+}
+
+.status.error {
+  color: #ef4444;
+}
+
+.start-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.start-btn:hover {
+  background: #2563eb;
+}
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--theme, #333);
+  transition: border-color 0.3s ease;
+}
+
+.mirrored {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  transform: scaleX(-1);
+}
+
+.overlay-canvas {
+  pointer-events: none;
+}
+
+.gesture-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid;
+  border-radius: 16px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(6px);
+  animation: pop 0.25s ease;
+}
+
+.gesture-emoji {
+  font-size: 36px;
+}
+
+.gesture-label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@keyframes pop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.sidebar {
+  width: 260px;
+  text-align: left;
+  background: #1a1a20;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #2a2a30;
+  font-size: 14px;
+}
+
+.history-list li small {
+  color: #777;
+  float: right;
+}
+
+.history-list .empty {
+  color: #666;
+  font-style: italic;
+}
