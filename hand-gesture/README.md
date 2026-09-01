@@ -3,7 +3,7 @@
 Sistem pendeteksi gestur tangan secara real-time berbasis webcam menggunakan **Google MediaPipe Hand Landmarker**. Proyek ini mengenali berbagai jenis bentuk tangan untuk memicu aksi atau mencatat riwayat interaksi secara otomatis.
 
 ---
-
+ 
 ## 🚀 Fitur Utama (v1.0.0)
 
 * **Open-Source Hand Landmarker**: Memanfaatkan model deteksi landmarker tangan dari Google MediaPipe untuk tracking sendi tangan secara akurat dan responsif.
